@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import { Suspense } from "react";
 import {
   getAllProducts,
   getProductBySlug,
@@ -42,16 +43,22 @@ export async function generateMetadata({
 
 export default async function DynamicProductPage({
   params,
+  searchParams,
 }: {
   params: { slug: string };
+  searchParams?: { vs?: string };
 }) {
   const p = await getProductBySlug(params.slug);
   if (!p) notFound();
   const competitors = await getCompetitorsForSlug(params.slug);
   const all = await getAllProducts();
-  const rival =
+  const defaultRival =
     competitors.find((c) => c.rating >= 4.4 && c.reviewCount >= 1500) ??
     competitors[0];
+  const requested = searchParams?.vs;
+  const rival =
+    (requested && competitors.find((c) => c.slug === requested)) ||
+    defaultRival;
 
   const savings = p.priceRrpEur - p.priceEur;
   const heroStats = [
@@ -177,24 +184,41 @@ export default async function DynamicProductPage({
         {/* QUICK COMPARE */}
         {rival && (
           <section id="confronto">
-            <QuickCompareStrip
-              title={`${p.name.split(" ").slice(0, 3).join(" ")} vs ${rival.name.split(" ").slice(0, 3).join(" ")}`}
-              primary={{
-                asin: p.asin,
-                name: p.name,
-                imageUrl: p.imageUrl,
-                priceEur: p.priceEur,
-                rating: p.rating,
-              }}
-              rival={{
-                asin: rival.asin,
-                name: rival.name,
-                imageUrl: rival.imageUrl,
-                priceEur: rival.priceEur,
-                rating: rival.rating,
-              }}
-              primarySlug={p.slug}
-            />
+            <Suspense
+              fallback={
+                <div className="h-40 rounded-2xl border border-neutral-200 bg-neutral-50 animate-pulse" />
+              }
+            >
+              <QuickCompareStrip
+                primary={{
+                  asin: p.asin,
+                  slug: p.slug,
+                  name: p.name,
+                  imageUrl: p.imageUrl,
+                  priceEur: p.priceEur,
+                  rating: p.rating,
+                }}
+                rival={{
+                  asin: rival.asin,
+                  slug: rival.slug,
+                  name: rival.name,
+                  imageUrl: rival.imageUrl,
+                  priceEur: rival.priceEur,
+                  rating: rival.rating,
+                }}
+                rivals={competitors.map((c) => ({
+                  asin: c.asin,
+                  slug: c.slug,
+                  brand: c.brand,
+                  name: c.name,
+                  imageUrl: c.imageUrl,
+                  priceEur: c.priceEur,
+                  rating: c.rating,
+                }))}
+                defaultSlug={defaultRival.slug}
+                primarySlug={p.slug}
+              />
+            </Suspense>
           </section>
         )}
 

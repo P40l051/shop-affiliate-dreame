@@ -2,39 +2,103 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter, useSearchParams } from "next/navigation";
+import { useMemo } from "react";
 import { formatPrice } from "@/lib/utils";
 import { AffiliateButton } from "./AffiliateButton";
 
 export interface QuickCompareItem {
   asin: string;
   name: string;
+  slug: string;
   imageUrl?: string;
   priceEur: number;
   rating: number;
 }
 
+export interface RivalOption extends QuickCompareItem {
+  brand: string;
+}
+
 export function QuickCompareStrip({
   primary,
   rival,
-  title,
+  rivals,
+  defaultSlug,
   primarySlug,
 }: {
   primary: QuickCompareItem;
   rival: QuickCompareItem;
-  title: string;
+  rivals: RivalOption[];
+  defaultSlug: string;
   primarySlug: string;
 }) {
-  const savings = primary.priceEur - rival.priceEur;
+  const router = useRouter();
+  const params = useSearchParams();
+  const activeSlug = params.get("vs") ?? defaultSlug;
+
+  const selected = useMemo(
+    () => rivals.find((r) => r.slug === activeSlug) ?? rivals.find((r) => r.slug === defaultSlug) ?? rival,
+    [activeSlug, rivals, defaultSlug, rival],
+  );
+
+  const savings = useMemo(() => primary.priceEur - selected.priceEur, [primary, selected]);
+
+  function onChange(slug: string) {
+    const next = new URLSearchParams(Array.from(params.entries()));
+    if (slug === defaultSlug) {
+      next.delete("vs");
+    } else {
+      next.set("vs", slug);
+    }
+    const qs = next.toString();
+    router.replace(qs ? `?${qs}` : "?", { scroll: false });
+  }
+
+  const titlePrefix = primary.name.split(" ").slice(0, 3).join(" ");
+  const titleSuffix = selected.name.split(" ").slice(0, 3).join(" ");
+
   return (
-    <section className="bg-gradient-to-br from-amazon-50 via-white to-neutral-50 rounded-2xl border border-amazon-100 p-6 sm:p-8 space-y-4">
-      <header>
-        <div className="text-xs uppercase tracking-wider text-amazon-700 font-bold mb-1">
-          Confronto rapido
+    <section className="bg-gradient-to-br from-amazon-50 via-white to-neutral-50 rounded-2xl border border-amazon-100 p-5 sm:p-8 space-y-5">
+      <header className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3">
+        <div>
+          <div className="text-xs uppercase tracking-wider text-amazon-700 font-bold mb-1">
+            Confronto rapido
+          </div>
+          <h3 className="text-xl sm:text-2xl font-bold text-neutral-900 leading-snug">
+            {titlePrefix} vs {titleSuffix}
+          </h3>
         </div>
-        <h3 className="text-xl font-bold text-neutral-900 leading-snug">
-          {title}
-        </h3>
+        <div className="flex items-center gap-2">
+          <label
+            htmlFor="qc-rival"
+            className="text-xs font-semibold text-neutral-600 hidden sm:inline"
+          >
+            Confronta con
+          </label>
+          <div className="relative flex-1 sm:flex-initial">
+            <select
+              id="qc-rival"
+              value={selected.slug}
+              onChange={(e) => onChange(e.target.value)}
+              className="appearance-none w-full sm:w-auto bg-white border border-neutral-300 rounded-lg pl-3 pr-9 py-3 min-h-[44px] text-sm font-semibold text-neutral-900 shadow-sm focus:outline-none focus:ring-2 focus:ring-amazon-500 focus:border-amazon-500"
+            >
+              {rivals.map((r) => (
+                <option key={r.slug} value={r.slug}>
+                  {r.brand} · {r.name}
+                </option>
+              ))}
+            </select>
+            <span
+              aria-hidden
+              className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-neutral-500 text-xs"
+            >
+              ▾
+            </span>
+          </div>
+        </div>
       </header>
+
       <div className="grid sm:grid-cols-3 gap-4 items-center">
         <CompareCard item={primary} highlight isPrimary />
         <div className="hidden sm:flex flex-col items-center justify-center text-neutral-400">
@@ -50,7 +114,7 @@ export function QuickCompareStrip({
             </div>
           )}
         </div>
-        <CompareCard item={rival} />
+        <CompareCard item={selected} key={selected.slug} />
       </div>
       <div className="flex justify-center pt-2">
         <AffiliateButton slug={primarySlug} label="Scegli il migliore" />
