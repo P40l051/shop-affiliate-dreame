@@ -406,7 +406,7 @@ export default async function DynamicProductPage({
             </p>
             <h3 className="font-bold text-neutral-900">Come funziona</h3>
             <p>
-              Quando clicchi su un prodotto Amazon presente nelle nostre pagine, il tuo browser imposta un cookie di tracciamento (durata 24 ore) che riconosce la provenienza da questo sito. Se acquisti entro 24 ore dall&apos;ultimo click, Amazon ci riconosce una commissione pari a una percentuale del prezzo del prodotto (tipicamente 3-5% per i robot aspirapolvere).
+              Quando clicchi su un prodotto Amazon presente nelle nostre pagine, il tuo browser imposta un cookie di tracciamento (durata 24 ore) che riconosce la provenienza da questo sito. Se acquisti entro 24 ore dall’ultimo click, Amazon ci riconosce una commissione pari a una percentuale del prezzo del prodotto (tipicamente 3-5% per i robot aspirapolvere).
             </p>
             <p>
               Il prezzo che vedi su Amazon.it rimane invariato. La commissione è pagata da Amazon, non viene addebitata al cliente.
