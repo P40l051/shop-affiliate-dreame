@@ -16,10 +16,10 @@ export async function Header() {
           <span className="text-amazon-600 truncate">RobotAspirapolvere.pro</span>
         </Link>
         <nav
-          aria-label="Prodotti"
+          aria-label="Navigazione principale"
           className="hidden md:flex items-center gap-4 text-xs"
         >
-          {all.slice(0, 8).map((p) => (
+          {all.slice(0, 6).map((p) => (
             <Link
               key={p.asin}
               href={`/prodotto/${p.slug}`}
@@ -28,6 +28,12 @@ export async function Header() {
               {p.brand} {navLabel(p.name)}
             </Link>
           ))}
+          <Link
+            href="/blog"
+            className="font-semibold text-amazon-700 hover:text-amazon-800 whitespace-nowrap"
+          >
+            Blog
+          </Link>
         </nav>
       </div>
       <nav
@@ -35,7 +41,7 @@ export async function Header() {
         className="md:hidden border-t border-neutral-100 bg-neutral-50"
       >
         <ul className="container-tight flex gap-2 py-2 overflow-x-auto snap-x snap-mandatory scrollbar-hide">
-          {all.slice(0, 8).map((p) => (
+          {all.slice(0, 6).map((p) => (
             <li key={p.asin} className="snap-start flex-shrink-0">
               <Link
                 href={`/prodotto/${p.slug}`}
@@ -45,6 +51,14 @@ export async function Header() {
               </Link>
             </li>
           ))}
+          <li className="snap-start flex-shrink-0">
+            <Link
+              href="/blog"
+              className="inline-flex items-center px-3 py-2 min-h-[36px] rounded-full bg-amazon-500 text-white text-xs font-semibold"
+            >
+              Blog
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>

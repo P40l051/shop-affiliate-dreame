@@ -11,7 +11,7 @@ export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
 export async function GET(
-  _req: Request,
+  req: Request,
   { params }: { params: { slug: string } }
 ) {
   const target = SLUG_TO_URL[params.slug];
@@ -21,5 +21,21 @@ export async function GET(
       { status: 404 }
     );
   }
-  return NextResponse.redirect(target, 302);
+  const out = new URL(target);
+  const incoming = new URL(req.url).searchParams;
+  const utm = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
+  for (const k of utm) {
+    const v = incoming.get(k);
+    if (v) out.searchParams.set(k, v);
+  }
+  if (!out.searchParams.has("utm_source")) {
+    out.searchParams.set("utm_source", "robotaspirapolvere.pro");
+  }
+  if (!out.searchParams.has("utm_medium")) {
+    out.searchParams.set("utm_medium", "affiliate");
+  }
+  if (!out.searchParams.has("utm_campaign")) {
+    out.searchParams.set("utm_campaign", params.slug);
+  }
+  return NextResponse.redirect(out.toString(), 302);
 }

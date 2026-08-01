@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/go/"],
       },
     ],
-    sitemap: "/sitemap.xml",
-    host: "/",
+    sitemap: "https://robotaspirapolvere.pro/sitemap.xml",
+    host: "https://robotaspirapolvere.pro",
   };
 }

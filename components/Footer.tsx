@@ -1,8 +1,8 @@
 export function Footer() {
   return (
     <footer className="border-t border-neutral-200 bg-white text-sm text-neutral-600">
-      <div className="container-tight py-8 grid gap-6 sm:grid-cols-2">
-        <div>
+      <div className="container-tight py-8 grid gap-6 sm:grid-cols-3">
+        <div className="sm:col-span-2">
           <div className="font-semibold text-neutral-900 mb-2">
             RobotAspirapolvere.pro
           </div>
@@ -14,6 +14,20 @@ export function Footer() {
           </p>
         </div>
         <div>
+          <div className="font-semibold text-neutral-900 mb-2">Naviga</div>
+          <ul className="space-y-1 text-xs">
+            <li>
+              <a className="hover:text-amazon-600" href="/blog">Guide acquisto</a>
+            </li>
+            <li>
+              <a className="hover:text-amazon-600" href="/prodotto/dreame-l40-ultra-ae">Dreame L40 Ultra AE</a>
+            </li>
+            <li>
+              <a className="hover:text-amazon-600" href="/prodotto/roborock-qv-35a">Roborock QV 35A</a>
+            </li>
+          </ul>
+        </div>
+        <div className="sm:col-span-3">
           <div className="font-semibold text-neutral-900 mb-2">Compliance</div>
           <ul className="space-y-1 text-xs">
             <li>Programma Affiliazione Amazon.it</li>

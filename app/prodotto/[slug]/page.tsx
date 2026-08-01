@@ -20,6 +20,14 @@ import { StickyBuyBar } from "@/components/StickyBuyBar";
 import { DREAME_L40_FAQ } from "@/lib/faq-data";
 import { formatPrice, humanizeKey } from "@/lib/utils";
 
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
+  "https://robotaspirapolvere.pro";
+
+function brandSlug(brand: string): string {
+  return brand.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+}
+
 export const revalidate = 86400;
 
 export async function generateStaticParams() {
@@ -84,6 +92,13 @@ export default async function DynamicProductPage({
         brand={p.brand}
       />
       <FAQSchemaJsonLd items={faqs} />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: `${SITE_URL}/prodotto/${p.slug}` },
+          { name: p.brand, url: `${SITE_URL}/brand/${brandSlug(p.brand)}` },
+          { name: p.name, url: `${SITE_URL}/prodotto/${p.slug}` },
+        ]}
+      />
 
       <article className="container-tight py-6 sm:py-10 lg:py-12 space-y-10 sm:space-y-12 lg:space-y-16 max-w-5xl">
         {/* HERO */}
@@ -511,6 +526,29 @@ function ComparisonTable({
         </tbody>
       </table>
     </div>
+  );
+}
+
+function BreadcrumbJsonLd({
+  items,
+}: {
+  items: { name: string; url: string }[];
+}) {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((it, idx) => ({
+      "@type": "ListItem",
+      position: idx + 1,
+      name: it.name,
+      item: it.url,
+    })),
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
   );
 }
 
