@@ -78,7 +78,7 @@ export default async function DynamicProductPage({
       />
       <FAQSchemaJsonLd items={faqs} />
 
-      <article className="container-tight py-12 space-y-16 max-w-5xl">
+      <article className="container-tight py-6 sm:py-10 lg:py-12 space-y-10 sm:space-y-12 lg:space-y-16 max-w-5xl">
         {/* HERO */}
         <header className="grid lg:grid-cols-[1.1fr_1fr] gap-6 lg:gap-10 items-center">
           <div className="order-2 lg:order-1 space-y-4 sm:space-y-5">
@@ -101,16 +101,16 @@ export default async function DynamicProductPage({
               <strong className="text-amazon-600">{formatPrice(savings)}</strong> sul prezzo di listino.
             </p>
             <StatBar stats={heroStats} variant="compact" />
-            <div className="flex items-baseline gap-4 flex-wrap bg-white border-2 border-amazon-200 rounded-2xl p-5">
-              <div>
+            <div className="flex items-baseline gap-3 sm:gap-4 flex-wrap bg-white border-2 border-amazon-200 rounded-2xl p-4 sm:p-5">
+              <div className="min-w-0">
                 <div className="text-xs uppercase tracking-wider text-amazon-700 font-bold">
                   Prezzo oggi
                 </div>
-                <div className="flex items-baseline gap-3 mt-1">
-                  <span className="text-5xl font-extrabold text-amazon-600">
+                <div className="flex items-baseline gap-2 sm:gap-3 mt-1 flex-wrap">
+                  <span className="text-4xl sm:text-5xl font-extrabold text-amazon-600">
                     {formatPrice(p.priceEur)}
                   </span>
-                  <span className="text-lg text-neutral-400 line-through">
+                  <span className="text-base sm:text-lg text-neutral-400 line-through">
                     {formatPrice(p.priceRrpEur)}
                   </span>
                   <span className="bg-red-500 text-white px-2.5 py-1 rounded-lg text-sm font-bold">
@@ -148,19 +148,19 @@ export default async function DynamicProductPage({
         </header>
 
         {/* PRICE BOX */}
-        <section className="bg-white border-2 border-amazon-200 rounded-2xl p-8 space-y-5 shadow-md">
-          <div>
+        <section className="bg-white border-2 border-amazon-200 rounded-2xl p-5 sm:p-8 space-y-5 shadow-md">
+          <div className="min-w-0">
             <div className="text-xs uppercase tracking-wider text-amazon-700 font-bold">
               Prezzo oggi
             </div>
-            <div className="flex items-baseline gap-3 flex-wrap mt-1">
-              <span className="text-6xl font-extrabold text-amazon-600">
+            <div className="flex items-baseline gap-2 sm:gap-3 flex-wrap mt-1">
+              <span className="text-4xl sm:text-6xl font-extrabold text-amazon-600">
                 {formatPrice(p.priceEur)}
               </span>
-              <span className="text-xl text-neutral-400 line-through">
+              <span className="text-lg sm:text-xl text-neutral-400 line-through">
                 {formatPrice(p.priceRrpEur)}
               </span>
-              <span className="bg-red-500 text-white px-3 py-1 rounded-lg text-base font-bold">
+              <span className="bg-red-500 text-white px-3 py-1 rounded-lg text-sm sm:text-base font-bold">
                 -{p.discountPct}% · risparmi {formatPrice(savings)}
               </span>
             </div>

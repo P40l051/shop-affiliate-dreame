@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+  html,
   body {
-    @apply text-neutral-900 antialiased bg-white;
+    @apply text-neutral-900 antialiased bg-white overflow-x-hidden;
   }
   a {
     @apply transition-colors;

@@ -18,8 +18,13 @@ export function StatBar({
   return (
     <ul
       className={cn(
-        "grid gap-" + (variant === "compact" ? "3" : "6"),
-        `grid-cols-2 sm:grid-cols-${stats.length}`,
+        "grid",
+        variant === "compact" ? "gap-3" : "gap-4 sm:gap-6",
+        stats.length >= 4
+          ? "grid-cols-2 sm:grid-cols-4"
+          : stats.length === 3
+            ? "grid-cols-1 sm:grid-cols-3"
+            : "grid-cols-2",
         className,
       )}
     >
@@ -27,8 +32,8 @@ export function StatBar({
         <li
           key={i}
           className={cn(
-            "bg-white rounded-xl border border-neutral-200 text-center",
-            variant === "compact" ? "p-3" : "p-5",
+            "bg-white rounded-xl border border-neutral-200 text-center min-w-0",
+            variant === "compact" ? "p-3" : "p-4 sm:p-5",
           )}
         >
           <div className={cn("mb-1", variant === "compact" ? "text-xl" : "text-3xl")}>
@@ -36,7 +41,7 @@ export function StatBar({
           </div>
           <div
             className={cn(
-              "font-extrabold text-amazon-600 tabular-nums",
+              "font-extrabold text-amazon-600 tabular-nums truncate",
               variant === "compact" ? "text-base" : "text-2xl",
             )}
           >
@@ -44,7 +49,7 @@ export function StatBar({
           </div>
           <div
             className={cn(
-              "text-neutral-600 mt-0.5",
+              "text-neutral-600 mt-0.5 break-words",
               variant === "compact" ? "text-[10px]" : "text-xs",
             )}
           >
