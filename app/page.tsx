@@ -1,10 +1,9 @@
 import { redirect } from "next/navigation";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL;
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
+  "https://robotaspirapolvere.pro";
 
 export default function HomePage() {
-  const target = SITE_URL
-    ? `${SITE_URL.replace(/\/$/, "")}/prodotto/dreame-l40-ultra-ae`
-    : "/prodotto/dreame-l40-ultra-ae";
-  redirect(target);
+  redirect(`${SITE_URL}/prodotto/dreame-l40-ultra-ae`);
 }

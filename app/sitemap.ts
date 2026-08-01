@@ -2,9 +2,9 @@ import type { MetadataRoute } from "next";
 import { getAllProducts } from "@/lib/products";
 import { getAllArticles, getArticleBySlug } from "@/lib/blog";
 
-const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || ""
-).replace(/^$/, "https://robotaspirapolvere.pro");
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
+  "https://robotaspirapolvere.pro";
 
 function brandSlug(brand: string): string {
   return brand.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
