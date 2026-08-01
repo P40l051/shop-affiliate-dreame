@@ -3,7 +3,9 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "next build",
   "framework": "nextjs",
-  "regions": ["fra1"],
+  "regions": [
+    "fra1"
+  ],
   "trailingSlash": false,
   "cleanUrls": true,
   "headers": [
@@ -103,12 +105,5 @@
       "destination": "/prodotto/dreame-l40-ultra-ae",
       "permanent": true
     }
-  ],
-  "functions": {
-    "app/go/[slug]/route.ts": {
-      "regions": ["fra1"],
-      "memory": 128,
-      "maxDuration": 5
-    }
-  }
+  ]
 }
