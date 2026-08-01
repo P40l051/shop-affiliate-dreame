@@ -80,8 +80,8 @@ export default async function DynamicProductPage({
 
       <article className="container-tight py-12 space-y-16 max-w-5xl">
         {/* HERO */}
-        <header className="grid lg:grid-cols-[1.1fr_1fr] gap-10 items-center">
-          <div className="space-y-5">
+        <header className="grid lg:grid-cols-[1.1fr_1fr] gap-6 lg:gap-10 items-center">
+          <div className="order-2 lg:order-1 space-y-4 sm:space-y-5">
             <div className="flex flex-wrap gap-2">
               {p.amazonChoice && (
                 <span className="inline-block bg-amazon-500 text-white px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase animate-pulse">
@@ -127,7 +127,7 @@ export default async function DynamicProductPage({
               </p>
             </div>
           </div>
-          <div className="relative aspect-square bg-white rounded-3xl p-6 flex items-center justify-center border border-neutral-200 overflow-hidden shadow-md">
+          <div className="order-1 lg:order-2 relative aspect-square bg-white rounded-3xl p-4 sm:p-6 flex items-center justify-center border border-neutral-200 overflow-hidden shadow-md">
             <Image
               src={p.imageUrl}
               alt={p.name}

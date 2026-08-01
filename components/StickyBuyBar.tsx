@@ -19,7 +19,12 @@ export function StickyBuyBar({
   reviewCount,
 }: StickyBuyBarProps) {
   return (
-    <div className="fixed bottom-0 inset-x-0 z-40 lg:hidden bg-white border-t border-neutral-200 shadow-[0_-4px_20px_-4px_rgba(0,0,0,0.1)]">
+    <div
+      role="region"
+      aria-label="Acquisto rapido"
+      className="fixed bottom-0 inset-x-0 z-40 lg:hidden bg-white border-t border-neutral-200 shadow-[0_-4px_20px_-4px_rgba(0,0,0,0.1)]"
+      style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
+    >
       <div className="container-tight py-3 flex items-center gap-3">
         <div className="flex-1 min-w-0">
           <div className="text-xs text-neutral-500 truncate">
