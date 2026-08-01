@@ -1,21 +1,25 @@
-import { redirect } from "next/navigation";
-import { getAffiliateUrlBySlug } from "@/lib/products";
+import { NextResponse } from "next/server";
+import competitors from "@/content/research/competitors.json";
 
+const SLUG_TO_URL: Record<string, string> = Object.fromEntries(
+  (competitors as { products: Array<{ slug: string; affiliateUrl: string }> })
+    .products.map((p) => [p.slug, p.affiliateUrl])
+);
+
+export const runtime = "edge";
 export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 export async function GET(
   _req: Request,
-  { params }: { params: { slug: string } },
+  { params }: { params: { slug: string } }
 ) {
-  const target = await getAffiliateUrlBySlug(params.slug);
+  const target = SLUG_TO_URL[params.slug];
   if (!target) {
-    return new Response("Not found", { status: 404 });
+    return NextResponse.json(
+      { error: "Not found", slug: params.slug },
+      { status: 404 }
+    );
   }
-  return Response.redirect(target, 302);
-}
-
-export const POST = GET;
-
-interface _UnusedType {
-  _redirect?: typeof redirect;
+  return NextResponse.redirect(target, 302);
 }
