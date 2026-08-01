@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export function Footer() {
   return (
     <footer className="border-t border-neutral-200 bg-white text-sm text-neutral-600">
@@ -22,14 +20,6 @@ export function Footer() {
             <li>Cookie tracciamento: 24 ore</li>
             <li>
               AGCM Provv. n. 25411/2018 · IAP · Operating Agreement Amazon EU
-            </li>
-            <li>
-              <Link
-                href="/prodotto/dreame-l40-ultra-ae"
-                className="text-amazon-600 hover:underline"
-              >
-                Disclosure completa in pagina prodotto ↗
-              </Link>
             </li>
           </ul>
         </div>
