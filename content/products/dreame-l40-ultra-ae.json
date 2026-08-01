@@ -1,0 +1,23 @@
+{
+  "slug": "dreame-l40-ultra-ae",
+  "highlights": {
+    "pro": [
+      "Rapporto qualità/prezzo eccellente nel segmento €300-500",
+      "Stazione autopulente riduce manutenzione giornaliera",
+      "Anti-groviglio gestisce capelli lunghi e peli animali"
+    ],
+    "contro": [
+      "Meno potente (19k Pa) di modelli premium Dreame/L50s (30k Pa)",
+      "App DreameHome richiede registrazione + Wi-Fi"
+    ]
+  },
+  "specs": {
+    "suction": "19.000 Pa",
+    "battery": "5.200 mAh",
+    "mopTemp": "75°C",
+    "autoEmptyDays": 100,
+    "obstacleAvoid": "3DAdapt (120+ oggetti)",
+    "noise": "~65 dB",
+    "surface": "pavimenti duri, tappeti, moquette"
+  }
+}
