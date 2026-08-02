@@ -26,7 +26,7 @@ export function AffiliateButton({
         rel="sponsored nofollow noopener"
         target="_blank"
         className={cn(
-          "inline-flex items-center justify-center gap-2 rounded-lg font-semibold transition-colors whitespace-nowrap min-h-[44px]",
+          "inline-flex items-center justify-center gap-2 rounded-lg font-semibold transition-colors whitespace-normal sm:whitespace-nowrap min-h-[44px]",
           variantClass,
           variant === "primary"
             ? "px-6 py-3 text-base"
