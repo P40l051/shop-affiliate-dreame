@@ -1,0 +1,26 @@
+{
+  "slug": "roborock-qrevo-curv-2-pro",
+  "highlights": {
+    "pro": [
+      "Prodotto di fascia alta: 25.000 Pa, doppio anti-groviglio e telaio AdaptiLift",
+      "Cinque funzioni premium: 100 °C lavaggio, 60 °C lavapavimenti, 55 °C asciugatura",
+      "Alto solo 7,98 cm con navigazione RetractSense per sotto mobili",
+      "Riconoscimento ostacoli ReactiveAI: oltre 200 oggetti giorno e notte"
+    ],
+    "contro": [
+      "Rating 4.2 con 446 recensioni: il più basso tra i modelli consigliati",
+      "Prezzo pieno 699,99€ contro un listino di 1.299€: sconto struttura",
+      "Recensioni in gran parte a 4-5 stelle ma con segnalazioni software (app)",
+      "Svuotamento ogni 60 giorni: sotto i 90-100 giorni di Dreame"
+    ]
+  },
+  "specs": {
+    "suction": "25.000 Pa Hyperforce",
+    "height": "7,98 cm",
+    "mopTemp": "100 °C",
+    "dryTemp": "55 °C",
+    "autoEmptyDays": 60,
+    "obstacleAvoid": "ReactiveAI + VertiBeam (200 oggetti)",
+    "surfaces": "AdaptiLift: tappeti fino a 3 cm"
+  }
+}

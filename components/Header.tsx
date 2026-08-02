@@ -3,13 +3,12 @@ import { getAllProducts } from "@/lib/products";
 
 export async function Header() {
   const all = await getAllProducts();
-  const primary = all.find((p) => p.isPrimary) ?? all[0];
   const navLabel = (name: string) => name.split(" ").slice(-2).join(" ");
   return (
     <header className="border-b border-neutral-200 bg-white sticky top-0 z-30">
       <div className="container-tight py-3 sm:py-4 flex items-center justify-between gap-3 sm:gap-4">
         <Link
-          href={`/prodotto/${primary.slug}`}
+          href="/"
           className="font-bold text-base sm:text-lg tracking-tight flex items-center gap-2 min-w-0"
         >
           <span aria-hidden>🤖</span>

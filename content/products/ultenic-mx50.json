@@ -1,0 +1,25 @@
+{
+  "slug": "ultenic-mx50",
+  "highlights": {
+    "pro": [
+      "Rating 4.8 su 715 recensioni: ottimo feedback per un brand emergente",
+      "20.000 Pa con spazzola a V: pensata per case con animali",
+      "Stazione all-in-one a 422€: lavaggio 65 °C, asciugatura 45 °C, 90 giorni di autonomia",
+      "Ampia copertura: moci estensibili +5,2 cm e sollevamento 15 mm sui tappeti"
+    ],
+    "contro": [
+      "Brand con meno storicità e assistenza rispetto a Dreame/Roborock",
+      "Base con serbatoio più piccolo (3 l contro i 4 l di Roborock)",
+      "App più semplice: meno personalizzazione delle mappe rispetto a Roborock"
+    ]
+  },
+  "specs": {
+    "suction": "20.000 Pa",
+    "mopTemp": "65 °C",
+    "dryTemp": "45 °C",
+    "autoEmptyDays": 90,
+    "mopExtend": "5,2 cm · lift 15 mm",
+    "navigation": "LiDAR dToF 360°, fino a 5 piani",
+    "smart": "Alexa + Google Assistant, Wi-Fi 2.4/5 GHz"
+  }
+}

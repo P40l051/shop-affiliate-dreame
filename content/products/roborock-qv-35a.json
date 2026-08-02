@@ -1,0 +1,25 @@
+{
+  "slug": "roborock-qv-35a",
+  "highlights": {
+    "pro": [
+      "Miglior prezzo del catalogo (299€) con stazione completa",
+      "Doppia spazzola rotante 200 giri/min e sollevamento moci 10 mm",
+      "Spazzola anti-groviglio certificata SGS (0% grovigli)",
+      "Mappatura LiDAR multipiano fino a 4 livelli"
+    ],
+    "contro": [
+      "8.000 Pa: potenza bassa rispetto a Dreame/Ultenic sopra i 400€",
+      "Svuotamento sacchetto ogni 7 settimane (vs 13-14 dei modelli premium)",
+      "Nessun riempimento automatico del detergente"
+    ]
+  },
+  "specs": {
+    "suction": "8.000 Pa",
+    "autoEmptyDays": 49,
+    "waterTank": "4 l · 300 m²",
+    "mopLift": "10 mm",
+    "floors": "4 piani",
+    "obstacleAvoid": "Reactive Tech",
+    "hygiene": "app + smartwatch + controllo vocale"
+  }
+}

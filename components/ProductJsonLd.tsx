@@ -6,9 +6,15 @@ export interface ProductJsonLdProps {
   priceEur: number;
   rating: number;
   reviewCount: number;
-  affiliateUrl: string;
+  slug: string;
   brand?: string;
   sku?: string;
+}
+
+function priceValidUntil(): string {
+  return new Date(Date.now() + 30 * 24 * 60 * 60 * 1000)
+    .toISOString()
+    .slice(0, 10);
 }
 
 export function ProductJsonLd({
@@ -19,7 +25,7 @@ export function ProductJsonLd({
   priceEur,
   rating,
   reviewCount,
-  affiliateUrl,
+  slug,
   brand,
   sku,
 }: ProductJsonLdProps) {
@@ -41,9 +47,10 @@ export function ProductJsonLd({
     },
     offers: {
       "@type": "Offer",
-      url: affiliateUrl,
+      url: `https://robotaspirapolvere.pro/prodotto/${slug}`,
       priceCurrency: "EUR",
       price: priceEur,
+      priceValidUntil: priceValidUntil(),
       availability: "https://schema.org/InStock",
       seller: {
         "@type": "Organization",

@@ -18,6 +18,14 @@ export const metadata: Metadata = {
       "Guide acquisto, recensioni approfondite e confronti tra i migliori robot aspirapolvere del 2026.",
     type: "website",
     url: `${SITE_URL}/blog`,
+    images: [{ url: `${SITE_URL}/og-default.png`, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Guide e recensioni robot aspirapolvere 2026",
+    description:
+      "Guide acquisto, recensioni approfondite e confronti tra i migliori robot aspirapolvere del 2026.",
+    images: [`${SITE_URL}/og-default.png`],
   },
 };
 

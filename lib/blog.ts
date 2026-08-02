@@ -224,6 +224,252 @@ export const BLOG_ARTICLES: BlogArticle[] = [
       },
     ],
   },
+  {
+    slug: "robot-aspirapolvere-lavapavimenti-qualita-prezzo",
+    title:
+      "Robot aspirapolvere lavapavimenti: i migliori per rapporto qualità/prezzo 2026",
+    description:
+      "I robot aspirapolvere lavapavimenti con il miglior rapporto qualità/prezzo del 2026 su Amazon.it: stazione autopulente, moci rotanti e prezzo giusto.",
+    keywords: [
+      "robot aspirapolvere lavapavimenti migliori",
+      "robot aspirapolvere lavapavimenti rapporto qualità prezzo",
+      "robot aspirapolvere con mocio under 500",
+    ],
+    publishedAt: "2026-06-20",
+    updatedAt: "2026-08-01",
+    readingMinutes: 8,
+    relatedSlugs: [
+      "dreame-l40-ultra-ae",
+      "dreame-l40s-pro-ultra",
+      "ultenic-mx50",
+    ],
+    blocks: [
+      {
+        type: "p",
+        text: "Il robot aspirapolvere lavapavimenti è diventato il prodotto più intelligente da comprare nel 2026: aspira e lava in un solo passaggio, torna alla base, lava i moci e svuota la polvere da solo. Il punto è scegliere il modello con il giusto equilibrio tra prezzo e funzioni. Questa guida confronta i modelli con il miglior rapporto qualità/prezzo su Amazon.it.",
+      },
+      { type: "h2", text: "Cosa rende un lavapavimenti davvero utile" },
+      {
+        type: "ul",
+        items: [
+          "Moci rotanti a 180-200 giri/min: puliscono davvero, non solo bagnano",
+          "Stazione autopulente: lava e asciuga i moci da solo alla fine di ogni ciclo",
+          "Svuotamento automatico della polvere: 60-100 giorni senza aprire il contenitore",
+          "Sollevamento dei moci: per passare sui tappeti senza bagnarli",
+        ],
+      },
+      { type: "h2", text: "I 3 migliori per rapporto qualità/prezzo" },
+      {
+        type: "ol",
+        items: [
+          "Dreame L40 Ultra AE (399€) — 19.000 Pa, stazione completa a 75°C, 3.000+ recensioni: il benchmark del 2026",
+          "Dreame L40s Pro Ultra (474€) — stesso prezzo di fascia ma con doppia spazzola HyperStream e 2.797 recensioni a 4,7",
+          "Ultenic MX50 (423€) — 20.000 Pa con spazzola a V anti-groviglio, perfetto per case con cani",
+        ],
+      },
+      {
+        type: "p",
+        text: "La fascia 400-480 euro è il punto dolce del 2026: sotto si rinuncia alla stazione completa, sopra si pagano potenza e novità che nella pulizia quotidiana non si notano.",
+      },
+      { type: "h2", text: "Il nostro consiglio" },
+      {
+        type: "p",
+        text: "Per la maggior parte delle case consigliamo il Dreame L40 Ultra AE: ha tutto ciò che serve (mapping LiDAR, lavaggio a 75°C, 100 giorni di svuotamento automatico, anti-groviglio) senza il sovrapprezzo dei modelli premium. Con le promozioni Amazon scende spesso sotto i 400 euro.",
+      },
+      {
+        type: "cta",
+        productSlug: "dreame-l40-ultra-ae",
+        label: "Vedi Dreame L40 Ultra AE su Amazon",
+      },
+      { type: "h2", text: "Quanto spendere davvero" },
+      {
+        type: "quote",
+        text: "Se hai tappeti e animali, non risparmiare mai sulla stazione: lavaggio e asciugatura dei moci fanno la differenza tra un pavimento pulito e uno solo bagnato.",
+      },
+    ],
+  },
+  {
+    slug: "miglior-robot-aspirapolvere-peli-animali-domestici",
+    title:
+      "Miglior robot aspirapolvere per peli di cani e gatti: testati 2026",
+    description:
+      "Robot aspirapolvere per chi ha animali domestici: quale modello raccoglie davvero i peli senza intasarsi? Spazzole anti-groviglio, filtri e consigli d'uso.",
+    keywords: [
+      "robot aspirapolvere peli di cane",
+      "robot aspirapolvere per animali domestici",
+      "miglior robot aspirapolvere casa con cani",
+    ],
+    publishedAt: "2026-07-10",
+    updatedAt: "2026-08-01",
+    readingMinutes: 9,
+    relatedSlugs: [
+      "dreame-l40-ultra-ae",
+      "ultenic-mx50",
+      "roborock-qv-35a",
+    ],
+    blocks: [
+      {
+        type: "p",
+        text: "Chi vive con cani o gatti lo sa: i peli finiscono ovunque e i robot aspirapolvere normali si intasano in poche settimane. La buona notizia è che i modelli 2026 sono progettati proprio per questo, con spazzole anti-groviglio certificate e filtri che trattengono anche peli corti e forfora.",
+      },
+      { type: "h2", text: "Cosa controllare prima di comprare" },
+      {
+        type: "ul",
+        items: [
+          "Spazzola anti-groviglio certificata (tipo SGS): taglia o devia i peli lunghi",
+          "Potenza di aspirazione: sopra i 15.000 Pa per strappare i peli dai tappeti",
+          "Filtro HEPA o triplo filtro: trattiene allergeni e pelo corto nell'aria",
+          "Contenitore e stazione facile da svuotare: per svuotamenti frequenti nelle settimane di muta",
+        ],
+      },
+      { type: "h2", text: "Il nostro top pick per le case con animali" },
+      {
+        type: "p",
+        text: "Il Dreame L40 Ultra AE è il modello che consigliamo: la spazzola TriCut taglia i capelli e i peli diretti nell'aspirazione, e la stazione da 100 giorni di autonomia evita di svuotare ogni due giorni. Durante la muta basta programmare una pulizia al giorno.",
+      },
+      {
+        type: "p",
+        text: "Se invece vuoi spendere meno, l'Ultenic MX50 ha la spazzola a V con doppi pettini che districa i peli in rotazione, costa 423€ e ha 20.000 Pa: ottimo rapporto qualità/prezzo per un piccolo appartamento con un cane.",
+      },
+      {
+        type: "cta",
+        productSlug: "ultenic-mx50",
+        label: "Vedi Ultenic MX50 su Amazon",
+      },
+      { type: "h2", text: "Consigli d'uso per risultati migliori" },
+      {
+        type: "ol",
+        items: [
+          "Programma una pulizia al giorno durante i periodi di muta (primavera e autunno)",
+          "Lascia il robot libero: posa tipiche zone critiche sotto vasi, lettiere e angoli lettino",
+          "Quando il contenitore è pieno, svuotalo prima del ciclo di lavaggio dei moci",
+          "Sostituisci il filtro ogni 4-6 mesi, o ogni 2 mesi se hai più di un animale",
+        ],
+      },
+      { type: "h2", text: "Verdetto" },
+      {
+        type: "quote",
+        text: "Per una casa con animali, potenza e anti-groviglio valgono più di qualsiasi funzione smart. Il L40 Ultra AE e l'MX50 sono i due modelli su cui non sbagli.",
+      },
+    ],
+  },
+  {
+    slug: "miglior-robot-aspirapolvere-sotto-400-euro",
+    title: "Miglior robot aspirapolvere sotto i 400 euro: la top list 2026",
+    description:
+      "I migliori robot aspirapolvere sotto i 400 euro su Amazon.it nel 2026: quali funzioni convengono e quali si possono saltare. La top list aggiornata.",
+    keywords: [
+      "robot aspirapolvere sotto 400 euro",
+      "robot aspirapolvere economico 2026",
+      "miglior robot aspirapolvere rapporto qualità prezzo 400",
+    ],
+    publishedAt: "2026-07-25",
+    readingMinutes: 7,
+    relatedSlugs: [
+      "dreame-l10s-ultra-gen3",
+      "roborock-qv-35a",
+      "dreame-l40-ultra-ae",
+    ],
+    blocks: [
+      {
+        type: "p",
+        text: "Con 400 euro nel 2026 puoi comprare un robot aspirapolvere intelligente, con mappatura LiDAR e stazione che svuota da sola. La vera domanda è dove risparmiare senza pentirsene: ecco la top list dei modelli sotto i 400 euro.",
+      },
+      { type: "h2", text: "Cosa ottieni sotto i 400 euro" },
+      {
+        type: "ul",
+        items: [
+          "Mappatura LiDAR e navigazione precisa stanza per stanza",
+          "Potenza 8.000-25.000 Pa a seconda del modello",
+          "Stazione con svuotamento automatico (7-14 settimane di autonomia)",
+          "App con programmazione, stanze e zone vietate",
+        ],
+      },
+      { type: "h2", text: "La top list 2026" },
+      {
+        type: "ol",
+        items: [
+          "Dreame L10s Ultra Gen 3 (379€) — 25.000 Pa e stazione all-in-one con 100 giorni di autonomia: il più completo sotto i 400€",
+          "Dreame L40 Ultra AE (399€) — di poco sopra, ma con lavaggio a 75°C e 3.000+ recensioni se bianco al picco",
+          "Roborock QV 35A (299€) — il più economico davvero completo: 8.000 Pa bastano per casa senza tappeti spessi",
+        ],
+      },
+      { type: "h2", text: "Dove conviene non risparmiare" },
+      {
+        type: "p",
+        text: "Non risparmiare sull'anti-groviglio (i capelli lunghi e i peli intasano le spazzole economiche) e sulla stazione autopulente: svuotare a mano ogni giorno riporta indietro di anni la comodità del robot. Il mapping LiDAR invece è ormai standard anche in questa fascia.",
+      },
+      {
+        type: "cta",
+        productSlug: "dreame-l10s-ultra-gen3",
+        label: "Vedi Dreame L10s Ultra Gen 3 su Amazon",
+      },
+      { type: "h2", text: "Il consiglio rapido" },
+      {
+        type: "quote",
+        text: "Sotto i 400€, il Dreame L10s Ultra Gen 3 è il modello con più funzioni per il prezzo: 25.000 Pa e stazione completa lo rendono imbattibile in questa fascia.",
+      },
+    ],
+  },
+  {
+    slug: "dreame-l40-ultra-ae-vs-dreame-l10s-ultra-gen3",
+    title: "Dreame L40 Ultra AE vs Dreame L10s Ultra Gen 3: quale scegliere",
+    description:
+      "Confronto diretto tra Dreame L40 Ultra AE e Dreame L10s Ultra Gen 3: potenza, stazione, prezzo e recensioni. Qual è il migliore per le tue esigenze?",
+    keywords: [
+      "dreame l40 ultra ae vs l10s ultra gen 3",
+      "dreame l40 oppure l10s",
+      "confronto dreame l40 l10s gen 3",
+    ],
+    publishedAt: "2026-08-01",
+    readingMinutes: 7,
+    relatedSlugs: ["dreame-l40-ultra-ae", "dreame-l10s-ultra-gen3"],
+    blocks: [
+      {
+        type: "p",
+        text: "Dreame L40 Ultra AE e Dreame L10s Ultra Gen 3 sono i due modelli Dreame più acquistati su Amazon Italia nel 2026, e costano quasi uguale. Scegliere tra i due è una delle domande più frequenti dei lettori: ecco il confronto diretto basato su dati e recensioni reali.",
+      },
+      { type: "h2", text: "Le differenze in sintesi" },
+      {
+        type: "ul",
+        items: [
+          "Potenza: L10s Gen 3 a 25.000 Pa supera i 19.000 Pa del L40 Ultra AE",
+          "Lavaggio: L40 Ultra AE con moci a 75°C e pulizia vassoio; L10s Gen 3 con lavaggio automatico dei moci e detergente",
+          "Recensioni: L40 Ultra AE con 3.051 verificate (4,5★); L10s Gen 3 con 1.411 (4,6★)",
+          "Anti-groviglio: L40 con spazzola TriCut; L10s con spazzola laterale estensibile per gli angoli",
+          "Prezzo: L40 Ultra AE 399€, L10s Gen 3 379€",
+        ],
+      },
+      { type: "h2", text: "Scegli il L40 Ultra AE se…" },
+      {
+        type: "ul",
+        items: [
+          "vuoi un modello con un campione molto più ampio di recensioni (3.000+)",
+          "passi spesso i moci e vuoi il lavaggio a 75°C con pulizia automatica del vassoio",
+          "hai capelli lunghi o cani: la spazzola TriCut taglia i peli",
+        ],
+      },
+      { type: "h2", text: "Scegli il L10s Ultra Gen 3 se…" },
+      {
+        type: "ul",
+        items: [
+          "vuoi più potenza di aspirazione (25.000 Pa) sullo stesso budget",
+          "apprezzi la spazzola estensibile che pulisce angoli e bordi",
+          "preferisci il modello più economico: 379€ contro 399€",
+        ],
+      },
+      {
+        type: "cta",
+        productSlug: "dreame-l40-ultra-ae",
+        label: "Vedi Dreame L40 Ultra AE su Amazon",
+      },
+      { type: "h2", text: "Verdetto" },
+      {
+        type: "quote",
+        text: "A parità di budget, il L40 Ultra AE è la scelta più sicura per chi vuole prima di tutto dati affidabili e lavaggio curato; il L10s Gen 3 è per chi cerca la potenza massima a prezzo minimo.",
+      },
+    ],
+  },
 ];
 
 export function getAllArticles(): BlogArticle[] {

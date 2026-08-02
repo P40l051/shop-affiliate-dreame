@@ -1,0 +1,25 @@
+{
+  "slug": "dreame-l10s-ultra-gen3",
+  "highlights": {
+    "pro": [
+      "25.000 Pa di aspirazione: tra i più alti nel segmento sotto i 400 euro",
+      "Stazione all-in-one con 100 giorni di svuotamento automatico",
+      "Spazzola laterale estensibile per angoli e spazi sotto i mobili",
+      "Batteria 5.200 mAh con ricarica rapida e supporto alla tariffa ridotta"
+    ],
+    "contro": [
+      "Recensioni verificate inferiori (1.400) rispetto ai modelli L40/L40s",
+      "Sollevamento moci di 10,5 mm: non adatto a tappeti a pelo alto",
+      "App DreameHome richiede registrazione e Wi-Fi 2.4 GHz"
+    ]
+  },
+  "specs": {
+    "suction": "25.000 Pa",
+    "battery": "5.200 mAh",
+    "autonomy": "231 min · 156 m²",
+    "autoEmptyDays": 100,
+    "mopLift": "10,5 mm",
+    "obstacleAvoid": "Smart Pathfinder 3D (scansione 3D)",
+    "charging": "Ricaricati +30% più veloce"
+  }
+}

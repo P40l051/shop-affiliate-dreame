@@ -6,7 +6,6 @@ import {
   getAllProducts,
   getProductBySlug,
   getCompetitorsForSlug,
-  getAffiliateUrlBySlug,
   type ProductFull,
 } from "@/lib/products";
 import { AffiliateButton } from "@/components/AffiliateButton";
@@ -46,6 +45,21 @@ export async function generateMetadata({
     title: `${p.name} (2026) — Recensione, Prezzo e Offerta Amazon`,
     description: `Recensione ${p.name} ${p.brand}: prezzo €${p.priceEur}, specifiche, ${p.reviewCount.toLocaleString("it-IT")} recensioni, confronto modelli simili, FAQ. Offerta Amazon con sconto.`,
     alternates: { canonical: `/prodotto/${p.slug}` },
+    openGraph: {
+      type: "website",
+      title: `${p.name} (2026) — Recensione e offerta`,
+      description: `Prezzo ${p.priceEur}€, ${p.rating}/5 da ${p.reviewCount.toLocaleString("it-IT")} recensioni verificate. Pro e contro, specifiche e confronto modelli.`,
+      url: `${SITE_URL}/prodotto/${p.slug}`,
+      images: p.imageUrl
+        ? [{ url: p.imageUrl, alt: p.name }]
+        : [{ url: `${SITE_URL}/og-default.png`, width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: "summary",
+      title: `${p.name} (2026) — Recensione e offerta`,
+      description: `Prezzo ${p.priceEur}€ · ${p.rating}/5 da ${p.reviewCount.toLocaleString("it-IT")} recensioni.`,
+      images: p.imageUrl ? [p.imageUrl] : [`${SITE_URL}/og-default.png`],
+    },
   };
 }
 
@@ -88,13 +102,13 @@ export default async function DynamicProductPage({
         priceEur={p.priceEur}
         rating={p.rating}
         reviewCount={p.reviewCount}
-        affiliateUrl={await getAffiliateUrlBySlug(p.slug).then((url) => url ?? "")}
+        slug={p.slug}
         brand={p.brand}
       />
       <FAQSchemaJsonLd items={faqs} />
       <BreadcrumbJsonLd
         items={[
-          { name: "Home", url: `${SITE_URL}/prodotto/${p.slug}` },
+          { name: "Home", url: `${SITE_URL}/` },
           { name: p.brand, url: `${SITE_URL}/brand/${brandSlug(p.brand)}` },
           { name: p.name, url: `${SITE_URL}/prodotto/${p.slug}` },
         ]}

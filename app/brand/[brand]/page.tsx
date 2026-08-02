@@ -32,6 +32,19 @@ export async function generateMetadata({
     title: `Robot aspirapolvere ${matched.brand} 2026 — ${others.length} modelli a confronto`,
     description: `Scopri tutti i robot aspirapolvere ${matched.brand} disponibili su Amazon.it nel 2026: prezzi, recensioni e confronto modelli.`,
     alternates: { canonical: `${SITE_URL}/brand/${params.brand}` },
+    openGraph: {
+      type: "website",
+      title: `Robot aspirapolvere ${matched.brand} 2026`,
+      description: `${others.length} modelli ${matched.brand} a confronto su Amazon.it con prezzi e recensioni verificate.`,
+      url: `${SITE_URL}/brand/${params.brand}`,
+      images: [`${SITE_URL}/og-default.png`],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `Robot aspirapolvere ${matched.brand} 2026`,
+      description: `${others.length} modelli a confronto con prezzi e recensioni.`,
+      images: [`${SITE_URL}/og-default.png`],
+    },
   };
 }
 

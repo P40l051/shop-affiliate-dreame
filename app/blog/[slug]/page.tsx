@@ -37,6 +37,13 @@ export async function generateMetadata({
       publishedTime: a.publishedAt,
       modifiedTime: a.updatedAt ?? a.publishedAt,
       url: `${SITE_URL}/blog/${a.slug}`,
+      images: [{ url: `${SITE_URL}/og-default.png`, width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: a.title,
+      description: a.description,
+      images: [`${SITE_URL}/og-default.png`],
     },
   };
 }

@@ -17,7 +17,13 @@ export function Footer() {
           <div className="font-semibold text-neutral-900 mb-2">Naviga</div>
           <ul className="space-y-1 text-xs">
             <li>
+              <a className="hover:text-amazon-600" href="/">Classifica robot aspirapolvere</a>
+            </li>
+            <li>
               <a className="hover:text-amazon-600" href="/blog">Guide acquisto</a>
+            </li>
+            <li>
+              <a className="hover:text-amazon-600" href="/chi-siamo">Chi siamo e come testiamo</a>
             </li>
             <li>
               <a className="hover:text-amazon-600" href="/prodotto/dreame-l40-ultra-ae">Dreame L40 Ultra AE</a>

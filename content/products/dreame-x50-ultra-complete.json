@@ -1,0 +1,25 @@
+{
+  "slug": "dreame-x50-ultra-complete",
+  "highlights": {
+    "pro": [
+      "Passa sotto i mobili: VersaLift scende a 89 mm di altezza",
+      "Supera soglie e ostacoli fino a 6 cm con aste robotiche retraibili",
+      "Igiene extra: lavaggio moci a 80 °C + luce UV antibatterica",
+      "Doppia spazzola HyperStream per capelli fino a 30 cm"
+    ],
+    "contro": [
+      "Prezzo alto (879,99€): fascia premium, si svaluta con le offerte",
+      "20.000 Pa: meno potente di L50s (30k) pur costando di più",
+      "Fascia da pagare per la funzione 'sotto i divani': non per tutti",
+      "Rating 4.4: il più basso tra i modelli Dreame consigliati"
+    ]
+  },
+  "specs": {
+    "suction": "20.000 Pa Vormax",
+    "height": "89 mm con VersaLift",
+    "obstacle": "soglie fino a 6 cm",
+    "mopTemp": "80 °C + UV",
+    "brushes": "HyperStream anti-groviglio",
+    "station": "PowerDock all-in-one con dosaggio detergente"
+  }
+}

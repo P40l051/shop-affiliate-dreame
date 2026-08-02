@@ -13,9 +13,11 @@ function brandSlug(brand: string): string {
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const all = await getAllProducts();
   const now = new Date();
-  const brands = Array.from(
-    new Set(all.map((p) => ({ brand: p.brand, slug: brandSlug(p.brand) }))),
-  );
+  const brandMap = new Map<string, string>();
+  for (const p of all) {
+    brandMap.set(brandSlug(p.brand), p.brand);
+  }
+  const brands = Array.from(brandMap, ([slug, brand]) => ({ brand, slug }));
 
   const productEntries: MetadataRoute.Sitemap = all.map((p) => ({
     url: `${SITE_URL}/prodotto/${p.slug}`,
@@ -51,7 +53,23 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
+  const staticPages: MetadataRoute.Sitemap = [
+    {
+      url: `${SITE_URL}/`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 1.0,
+    },
+    {
+      url: `${SITE_URL}/chi-siamo`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.3,
+    },
+  ];
+
   return [
+    ...staticPages,
     ...productEntries,
     ...brandEntries,
     ...blogEntries,

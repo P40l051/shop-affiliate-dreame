@@ -1,0 +1,24 @@
+{
+  "slug": "dreame-l40s-pro-ultra",
+  "highlights": {
+    "pro": [
+      "Miglior rapporto qualità/prezzo della famiglia Dreame: 474€ per funzioni top",
+      "2.797 recensioni verificate e rating 4.7: il più testato dei modelli L40",
+      "19.000 Pa Vormax con motore TurboForce di sesta generazione",
+      "Stazione all-in-one: 100 giorni di svuotamento automatico e moci a 75 °C"
+    ],
+    "contro": [
+      "19.000 Pa: inferiore ai 25-30k dei modelli di fascia superiore",
+      "Supera ostacoli solo fino a 4 cm (EasyLeap)",
+      "Nessuna estensione spazzola laterale per angoli estremi"
+    ]
+  },
+  "specs": {
+    "suction": "19.000 Pa",
+    "mopTemp": "75 °C",
+    "autoEmptyDays": 100,
+    "brushes": "HyperStream doppia anti-groviglio",
+    "obstacle": "EasyLeap fino a 4 cm",
+    "station": "all-in-one con detergente incluso (200 ml)"
+  }
+}

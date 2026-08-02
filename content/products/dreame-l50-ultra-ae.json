@@ -1,0 +1,24 @@
+{
+  "slug": "dreame-l50-ultra-ae",
+  "highlights": {
+    "pro": [
+      "28.000 Pa Vormax: potenza elevata nel segmento 500-600€",
+      "ThermoHub a 100 °C con vassoio AceClean e 20 ugelli di lavaggio",
+      "Spazzola TriCut con lama integrata contro i grovigli di capelli",
+      "Dual Flex Arm per bordi, angoli e battiscopa"
+    ],
+    "contro": [
+      "Solo 304 recensioni verificate: modello ancora poco testato sul mercato",
+      "Stessa fascia di prezzo del L50s ma con meno potenza",
+      "Serbatoio e manutenzione del vassoio da curare ogni ciclo"
+    ]
+  },
+  "specs": {
+    "suction": "28.000 Pa",
+    "mopTemp": "100 °C",
+    "brush": "TriCut con lama",
+    "station": "PowerDock: lavaggio, asciugatura, svuoto, ricarica",
+    "reach": "Dual Flex Arm esteso",
+    "trayClean": "AceClean DryBoard, 20 ugelli"
+  }
+}
