@@ -53,6 +53,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
+  const confrontoEntries: MetadataRoute.Sitemap = [];
+  for (let i = 0; i < all.length; i++) {
+    for (let j = i + 1; j < all.length; j++) {
+      confrontoEntries.push({
+        url: `${SITE_URL}/confronto/${all[i].slug}/vs/${all[j].slug}`,
+        lastModified: now,
+        changeFrequency: "monthly",
+        priority: 0.5,
+      });
+    }
+  }
+
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: `${SITE_URL}/`,
@@ -74,5 +86,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...brandEntries,
     ...blogEntries,
     ...blogIndex,
+    ...confrontoEntries,
   ];
 }

@@ -119,6 +119,14 @@ export function QuickCompareStrip({
       <div className="flex justify-center pt-2">
         <AffiliateButton slug={primarySlug} label="Scegli il migliore" />
       </div>
+      <div className="flex justify-center">
+        <Link
+          href={`/confronto/${primarySlug}/vs/${selected.slug}`}
+          className="text-sm font-semibold text-amazon-700 hover:text-amazon-800 underline underline-offset-2"
+        >
+          Apri confronto completo →
+        </Link>
+      </div>
     </section>
   );
 }

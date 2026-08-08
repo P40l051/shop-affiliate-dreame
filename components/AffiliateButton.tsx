@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { trackAffiliateClick } from "@/lib/analytics";
 
 export function AffiliateButton({
   slug,
@@ -25,6 +28,7 @@ export function AffiliateButton({
         href={`/go/${slug}`}
         rel="sponsored nofollow noopener"
         target="_blank"
+        onClick={() => trackAffiliateClick(slug)}
         className={cn(
           "inline-flex items-center justify-center gap-2 rounded-lg font-semibold transition-colors whitespace-normal sm:whitespace-nowrap min-h-[44px]",
           variantClass,

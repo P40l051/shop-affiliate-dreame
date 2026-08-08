@@ -489,3 +489,14 @@ export function getRelatedArticles(article: BlogArticle, n = 3): BlogArticle[] {
       article.relatedSlugs.some((p) => a.relatedSlugs.includes(p)),
   ).slice(0, n);
 }
+
+export function getArticlesByProductSlug(
+  slug: string,
+  n = 3,
+): BlogArticle[] {
+  return BLOG_ARTICLES.filter(
+    (a) =>
+      a.relatedSlugs.includes(slug) ||
+      a.blocks.some((b) => b.type === "cta" && b.productSlug === slug),
+  ).slice(0, n);
+}

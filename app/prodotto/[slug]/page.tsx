@@ -9,6 +9,7 @@ import {
   type ProductFull,
 } from "@/lib/products";
 import { AffiliateButton } from "@/components/AffiliateButton";
+import { getArticlesByProductSlug } from "@/lib/blog";
 import { ProductJsonLd } from "@/components/ProductJsonLd";
 import { TrustPills, DEFAULT_TRUST_ITEMS } from "@/components/TrustPills";
 import { StatBar } from "@/components/StatBar";
@@ -415,6 +416,44 @@ export default async function DynamicProductPage({
             ))}
           </div>
         </section>
+
+        {/* RELATED GUIDES */}
+        {(() => {
+          const relatedGuides = getArticlesByProductSlug(p.slug, 3);
+          if (relatedGuides.length === 0) return null;
+          return (
+            <section className="space-y-4">
+              <header>
+                <div className="text-xs uppercase tracking-wider text-neutral-500">
+                  Guide popolari
+                </div>
+                <h2 className="text-2xl sm:text-3xl font-bold tracking-tight mt-1">
+                  Guide correlate
+                </h2>
+              </header>
+              <ul className="grid sm:grid-cols-3 gap-4">
+                {relatedGuides.map((a) => (
+                  <li key={a.slug}>
+                    <a
+                      href={`/blog/${a.slug}`}
+                      className="block bg-white rounded-xl border border-neutral-200 p-4 h-full hover:border-amazon-300 hover:shadow-sm transition-all"
+                    >
+                      <h3 className="font-bold text-sm text-neutral-900 leading-snug">
+                        {a.title}
+                      </h3>
+                      <p className="text-xs text-neutral-600 mt-1 line-clamp-3">
+                        {a.description}
+                      </p>
+                      <span className="text-xs text-amazon-600 font-semibold mt-2 inline-block">
+                        Leggi →
+                      </span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          );
+        })()}
 
         {/* DISCLOSURE */}
         <section className="space-y-4">

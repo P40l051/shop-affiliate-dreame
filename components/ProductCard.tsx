@@ -97,6 +97,10 @@ export function ProductCard({
           🔥 {product.boughtPastMonth.toLocaleString("it-IT")}+ acquistati nel mese scorso
         </div>
       )}
+      <div className="flex items-center gap-1 text-[11px] text-neutral-500 mt-1">
+        <span aria-hidden>✓</span>
+        <span>Prezzo e disponibilità verificati su Amazon.it</span>
+      </div>
       <div className="mt-auto pt-2">
         <AffiliateButton slug={product.slug} />
       </div>
